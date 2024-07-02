@@ -1,0 +1,19 @@
+@extends('store.layouts.'.$template.'.app')
+@section('header')
+    @include('store.layouts.'.$template.'.master.header')
+@endsection
+@section('banner')
+@include('store.layouts.'.$template.'.demo.pages.blog.banner')
+@endsection
+@section('blog-categorie')
+@include('store.layouts.'.$template.'.demo.pages.blog.blog-categorie')
+@endsection
+@section('blog')
+@include('store.layouts.'.$template.'.demo.pages.blog.blog')
+@endsection
+@section('footer')
+    @include('store.layouts.'.$template.'.master.footer')
+@endsection
+@section('jsfiles')
+    @include('store.layouts.'.$template.'.master.jsfiles')
+@endsection

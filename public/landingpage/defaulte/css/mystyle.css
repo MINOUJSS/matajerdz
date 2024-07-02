@@ -1,0 +1,50 @@
+/* editing header style */
+.my-me-auto
+{
+    margin-left: auto!important;
+}
+#hero .btn-watch-video
+{
+    margin: 10px 25px 0 0;
+}
+#hero .btn-watch-video i
+{
+    margin-left: 8px;
+}
+.about .content ul li 
+{
+    padding-right: 28px;
+}
+.about .content ul i 
+{
+    right:0;
+}
+.text-lg-start 
+{
+    text-align: right !important;
+}
+.team .member .member-info 
+{
+    padding-right: 30px;
+}
+.team .member span::after 
+{
+    right:0;
+}
+.portfolio .portfolio-item .portfolio-info .details-link {
+    left: 10px !important;
+}
+.portfolio .portfolio-item .portfolio-info .preview-link
+{
+    left: 40px !important;
+}
+
+.pricing ul 
+{
+    padding: 0 20px;
+    text-align: right;
+}
+.pricing ul i 
+{
+    position: relative;
+}

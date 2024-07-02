@@ -1,0 +1,25 @@
+/* minou jss style */
+/* 1- font */
+@font-face {
+    font-family:"Noto_Kufi_Arabic";
+    src: url('../fonts/Noto_Kufi_Arabic/static/NotoKufiArabic-Bold.ttf');
+}
+body {
+    font-family:"Noto_Kufi_Arabic";
+}
+.fa-ban:hover
+{
+ color:#f00 !important;
+}
+.fa-trash-alt:hover
+{
+    color:#f00 !important;   
+}
+.fa-chart-line:hover
+{
+    color:#0f0 !important;
+}
+.footable-toggle:hover
+{
+    color:#0f0 !important;  
+}

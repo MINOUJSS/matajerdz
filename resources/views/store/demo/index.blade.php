@@ -1,0 +1,31 @@
+@extends('store.layouts.'.$template.'.app')
+@section('header')
+    @include('store.layouts.'.$template.'.master.header')
+@endsection
+@section('banner')
+    @include('store.layouts.'.$template.'.demo.pages.index.banner')
+@endsection
+@section('features')
+    @include('store.layouts.'.$template.'.demo.pages.index.features')
+@endsection
+@section('category')
+    @include('store.layouts.'.$template.'.demo.pages.index.category')
+@endsection
+@section('product')
+    @include('store.layouts.'.$template.'.demo.pages.index.product')
+@endsection
+@section('exclusive-deal')
+    @include('store.layouts.'.$template.'.demo.pages.index.exclusive-deal')
+@endsection
+@section('brand')
+    @include('store.layouts.'.$template.'.demo.pages.index.brand')
+@endsection
+@section('related-product')
+    @include('store.layouts.'.$template.'.demo.pages.index.related-product')
+@endsection
+@section('footer')
+    @include('store.layouts.'.$template.'.master.footer')
+@endsection
+@section('jsfiles')
+    @include('store.layouts.'.$template.'.master.jsfiles')
+@endsection

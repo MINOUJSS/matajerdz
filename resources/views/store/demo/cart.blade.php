@@ -1,0 +1,16 @@
+@extends('store.layouts.'.$template.'.app')
+@section('header')
+    @include('store.layouts.'.$template.'.master.header')
+@endsection
+@section('banner')
+    @include('store.layouts.'.$template.'.demo.pages.cart.banner')
+@endsection
+@section('cart')
+    @include('store.layouts.'.$template.'.demo.pages.cart.cart')
+@endsection
+@section('footer')
+    @include('store.layouts.'.$template.'.master.footer')
+@endsection
+@section('jsfiles')
+    @include('store.layouts.'.$template.'.master.jsfiles')
+@endsection
