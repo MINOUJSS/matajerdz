@@ -1,7 +1,7 @@
 <?php
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
-use App\models\Wilaya\Wilaya;
+use App\Models\Wilaya\Wilaya;
 
 class Wilaya_Table_Seeder extends Seeder
 {
