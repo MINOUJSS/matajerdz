@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Database\Seeders;
+use Illuminate\Database\Seeder;
 use App\Models\Dayra\Dayra;
 
 class Dayra_Table_Seeder extends Seeder

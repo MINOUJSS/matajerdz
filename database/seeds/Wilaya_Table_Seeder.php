@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Database\Seeders;
+use Illuminate\Database\Seeder;
 use App\models\Wilaya\Wilaya;
 
 class Wilaya_Table_Seeder extends Seeder
