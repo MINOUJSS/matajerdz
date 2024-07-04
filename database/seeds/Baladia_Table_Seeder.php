@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeders;
 use App\Models\Baladia\Baladia;
 
-class Baladia_Table_Seeder extends Seeders
+class Baladia_Table_Seeder extends Seeder
 {
     /**
      * Run the database seeds.

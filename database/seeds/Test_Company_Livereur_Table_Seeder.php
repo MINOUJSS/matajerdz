@@ -4,7 +4,7 @@ use Illuminate\Database\Seeders;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 
-class Test_Company_Livereur_Table_Seeder extends Seeders
+class Test_Company_Livereur_Table_Seeder extends Seeder
 {
     /**
      * Run the database seeds.
