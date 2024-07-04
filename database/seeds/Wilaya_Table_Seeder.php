@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeders;
 use App\models\Wilaya\Wilaya;
 
-class Wilaya_Table_Seeder extends Seeder
+class Wilaya_Table_Seeder extends Seeders
 {
     /**
      * Run the database seeds.

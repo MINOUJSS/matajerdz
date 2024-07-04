@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Database\Seeder;
+use Illuminate\Database\Seeders;
 use App\Models\Baladia\Baladia;
 
-class Baladia_Table_Seeder extends Seeder
+class Baladia_Table_Seeder extends Seeders
 {
     /**
      * Run the database seeds.

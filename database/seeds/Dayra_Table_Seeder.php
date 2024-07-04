@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeders;
 use App\Models\Dayra\Dayra;
 
-class Dayra_Table_Seeder extends Seeder
+class Dayra_Table_Seeder extends Seeders
 {
     /**
      * Run the database seeds.

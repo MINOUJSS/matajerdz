@@ -4,7 +4,7 @@ use Illuminate\Database\Seeders;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 
-class Super_Admin_Table_Seeder extends Seeder
+class Super_Admin_Table_Seeder extends Seeders
 {
     /**
      * Run the database seeds.
