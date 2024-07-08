@@ -22,3 +22,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+//test chrgily payment
+Route::post('chargilypay/redirect','Admin\ChargilyPayController@redirect')->name("chargilypay.redirect");
+Route::get('chargilypay/payments/success','Admin\ChargilyPayController@success')->name("chargilypay.payments.success");
+Route::post('chargilypay/webhook','Admin\ChargilyPayController@webhook')->name("chargilypay.webhook_endpoint");
