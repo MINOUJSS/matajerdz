@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\supplier;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
+use App\Http\Controllers\Controller;
 
 class TestController extends Controller
 {
     //
     public function test($subdomain)
     {
-        return $subdomain;
+        return 'This Is Supplier subdomain : '.$subdomain.' url:'.URL::to('/');
     }
 }

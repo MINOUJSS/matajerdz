@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-// Route::domain('{subdomain}.supplier.matajerdz.test')->group(function($subdomain){
+Route::domain('{subdomain}.dropshiper.matajerdz.test')->group(function($subdomain){
     Route::get('/','Dropshiper\TestController@test')->name('dropshiper.test');
-// })
+ });

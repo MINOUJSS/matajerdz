@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-// Route::domain('{subdomain}.supplier.matajerdz.test')->group(function($subdomain){
+Route::domain('{subdomain}.seller.matajerdz.test')->group(function($subdomain){
     Route::get('/','Seller\TestController@test')->name('seller.test');
-// })
+});
