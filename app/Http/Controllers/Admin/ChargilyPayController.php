@@ -15,7 +15,7 @@ class ChargilyPayController extends Controller
     {
         $success_page=route('chargilypay.payments.success'); 
         $operation_id=Str::random(20).'OPR'.time();
-        return dd($operation_id);     
+        // return dd($operation_id);     
         $curl = curl_init();
 
         curl_setopt_array($curl, [
