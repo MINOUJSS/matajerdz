@@ -49,7 +49,7 @@ class ChargilyPayController extends Controller
         //dd($checkout_data);
         //insert this data to checkout table
         $chrgily_pay=new ChargilyPay();
-        $chrgily_pay->operation_id="$operation_id";
+        $chrgily_pay->operation_id=$operation_id;
         $chrgily_pay->user_id='1';
         $chrgily_pay->user_guard='supplier';
         $chrgily_pay->livemode="$checkout_data->livemode";
@@ -92,10 +92,15 @@ class ChargilyPayController extends Controller
     {
         $url=$request->fullurl();
         $param=explode('?',$url);
-        $operation=explode('=',$param[1]);
+        // dd($param);
+        $key2=explode('=',$param[1]);
+        $operation=explode('&',$key2[1]);
+        $opration_value=$key2[2];
+        $operation2=explode('&',$operation[1]);
+        $opration_key=$operation2[0];
         $template='defaulte';
-        $paiment=ChargilyPay::where('operation_id',$operation[1])->first();
-        if($operation[0]=='operation_id' && $paiment->operation_id==$operation[1])
+        $paiment=ChargilyPay::where('operation_id',$opration_value)->first();
+        if($opration_key=='operation_id' && $paiment->operation_id==$opration_value)
         {
             return view('LandingPage.success',compact('template','paiment'));
         }else
