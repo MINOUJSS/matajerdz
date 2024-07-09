@@ -92,7 +92,6 @@ class ChargilyPayController extends Controller
     {
         $url=$request->fullurl();
         $param=explode('?',$url);
-        // dd($param);
         $key2=explode('=',$param[1]);
         $operation=explode('&',$key2[1]);
         $opration_value=$key2[2];
