@@ -95,7 +95,7 @@ class ChargilyPayController extends Controller
         $operation=explode('=',$param[1]);
         $template='defaulte';
         $paiment=ChargilyPay::where('operation_id',$operation[1])->first();
-        if($operation[0]=='operation_id' && $paiment->checkout_id==$operation[1])
+        if($operation[0]=='operation_id' && $paiment->operation_id==$operation[1])
         {
             return view('LandingPage.success',compact('template','paiment'));
         }else
