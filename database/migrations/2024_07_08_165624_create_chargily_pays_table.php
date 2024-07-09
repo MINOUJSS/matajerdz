@@ -15,6 +15,7 @@ class CreateChargilyPaysTable extends Migration
     {
         Schema::create('chargily_pays', function (Blueprint $table) {
             $table->id();
+            $table->text('operation_id')->nullble()->default(NULL);
             $table->text('user_id')->nullble()->default(NULL);
             $table->text('user_guard')->nullble()->default(NULL);
             $table->text('livemode')->nullble()->default(NULL);

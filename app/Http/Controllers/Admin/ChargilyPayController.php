@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
@@ -12,7 +13,10 @@ class ChargilyPayController extends Controller
     //
     public function redirect()
     {
-                $curl = curl_init();
+        $success_page=route('chargilypay.payments.success'); 
+        $operation_id=Str::random(20).'OPR'.time();
+        return dd($operation_id);     
+        $curl = curl_init();
 
         curl_setopt_array($curl, [
         CURLOPT_URL => "https://pay.chargily.net/test/api/v2/checkouts",
@@ -22,7 +26,7 @@ class ChargilyPayController extends Controller
         CURLOPT_TIMEOUT => 30,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => "{\n  \"amount\": 1000,\n  \"currency\": \"dzd\",\n  \"success_url\": \"https://your-cool-website.com/payments/success\"\n}",
+        CURLOPT_POSTFIELDS => "{\n  \"amount\": 1000,\n  \"currency\": \"dzd\",\n  \"success_url\": \"$success_page?operation_id=$operation_id\"\n}",
         CURLOPT_HTTPHEADER => [
             "Authorization: Bearer test_sk_gpdoJktjYvibE4ydPsWQs6tf062lu6Rj5N4hQCo3",
             "Content-Type: application/json"
@@ -45,6 +49,7 @@ class ChargilyPayController extends Controller
         //dd($checkout_data);
         //insert this data to checkout table
         $chrgily_pay=new ChargilyPay();
+        $chrgily_pay->operation_id="$operation_id";
         $chrgily_pay->user_id='1';
         $chrgily_pay->user_guard='supplier';
         $chrgily_pay->livemode="$checkout_data->livemode";
@@ -83,9 +88,20 @@ class ChargilyPayController extends Controller
 
     }
     //success
-    public function success(Response $response)
+    public function success(Request $request)
     {
-        return $respons;
+        $url=$request->fullurl();
+        $param=explode('?',$url);
+        $operation=explode('=',$param[1]);
+        $template='defaulte';
+        $paiment=ChargilyPay::where('operation_id',$operation[1])->first();
+        if($operation[0]=='operation_id' && $paiment->checkout_id==$operation[1])
+        {
+            return view('LandingPage.success',compact('template','paiment'));
+        }else
+        {
+            return 'error';
+        }
     }
     //webhook
     public function webhook()
